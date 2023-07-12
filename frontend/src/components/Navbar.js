@@ -2,16 +2,22 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './styles.css';
 
-// Komponen ini menampilkan navigasi untuk menuju halaman beranda, daftar produk, dan tentang kami.
+// Komponen ini menampilkan navigasi untuk menuju 
+//halaman beranda, daftar produk, dan tentang kami.
 
 function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Hapus token dari localStorage
-    navigate("/login"); // Redirect ke halaman login setelah logout
-    window.location.reload(); // Memuat ulang halaman setelah logout
-  };
+    const confirmLogout = window.confirm('Are you sure you want to logout?');
+    if (confirmLogout) {
+      localStorage.removeItem('token');
+      navigate('/login');
+      window.location.reload();
+      alert('Logout successful');
+    }
+  };
+
   return (
     <nav className="nabar">
       <div className="navbar-brand">
