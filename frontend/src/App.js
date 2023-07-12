@@ -14,8 +14,11 @@ import './App.css';
 // App.js merupakan komponen utama aplikasi. Di dalamnya, digunakan BrowserRouter dari react-router-dom untuk menangani rute.
 // Komponen Navbar ditempatkan di atas komponen Routes untuk menampilkan navigasi di setiap halaman.
 // Routes digunakan untuk menentukan rute dan komponen yang akan ditampilkan pada setiap rute.
-// Terdapat pengecekan isLoggedIn yang menentukan tampilan yang akan ditampilkan berdasarkan status login pengguna. Jika pengguna sudah login, maka komponen ProductList, AddProduct, EditProduct, Home, dan About akan ditampilkan. Jika pengguna belum login, maka komponen Login dan Register akan ditampilkan.
-// Ketika pengguna berhasil login, token JWT yang diterima akan disimpan di localStorage dan status login akan diubah menjadi true. Ketika pengguna melakukan logout, token akan dihapus dari localStorage dan status login akan diubah menjadi false.
+// Terdapat pengecekan isLoggedIn yang menentukan tampilan yang akan ditampilkan berdasarkan status login pengguna. 
+// Jika pengguna sudah login, maka komponen ProductList, AddProduct, EditProduct, Home, dan About akan ditampilkan. 
+// Jika pengguna belum login, maka komponen Login dan Register akan ditampilkan.
+// Ketika pengguna berhasil login, token JWT yang diterima akan disimpan di localStorage dan status login akan diubah 
+// menjadi true. Ketika pengguna melakukan logout, token akan dihapus dari localStorage dan status login akan diubah menjadi false.
 // Dalam komponen Login, digunakan useNavigate untuk melakukan navigasi ke halaman beranda setelah login berhasil.
 
 function App() {
